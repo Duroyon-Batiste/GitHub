@@ -1,0 +1,54 @@
+package B1_Dévellopement.Applicatif.Exercices.Module_2;
+
+import java.util.Scanner;
+
+public class Exercice_10 {
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Entrez un numéro de mois (1-12) : ");
+        int moi = scanner.nextInt();
+        System.out.print("Entrez une annee : ");
+        int annee = scanner.nextInt();
+        scanner.close();
+
+        if (moi == 1) {
+            System.out.print(31);
+        } else if (moi == 2) {
+            if (annee % 4 == 0) {
+                if (annee % 100 == 0) {
+                    if (annee % 400 == 0) {
+                        System.out.print(29);
+                    } else {
+                        System.out.print(28);
+                    }
+                } else {
+                    System.out.print(29);
+                }
+            } else {
+                System.out.print(28);
+            }
+        } else if (moi == 3) {
+            System.out.print(31);
+        } else if (moi == 4) {
+            System.out.print(30);
+        } else if (moi == 5) {
+            System.out.print(31);
+        } else if (moi == 6) {
+            System.out.print(30);
+        } else if (moi == 7) {
+            System.out.print(31);
+        } else if (moi == 8) {
+            System.out.print(31);
+        } else if (moi == 9) {
+            System.out.print(30);
+        } else if (moi == 10) {
+            System.out.print(31);
+        } else if (moi == 11) {
+            System.out.print(30);
+        } else if (moi == 12) {
+            System.out.print(31);
+        } else {
+            System.out.print("Numéro de mois invalide.");
+        }
+    }
+}
